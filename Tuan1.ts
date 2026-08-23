@@ -73,3 +73,31 @@ class Rectangle {
 const rect = new Rectangle(5, 10);
 console.log("Area:", rect.getArea());
 console.log("Perimeter:", rect.getPerimeter());
+
+// Bài 5
+class BankAccount {
+    balance: number;
+
+    constructor(balance: number) {
+        this.balance = balance;
+    }
+
+    deposit(amount: number): void {
+        this.balance += amount;
+        console.log(`Deposit: ${amount}, New balance: ${this.balance}`);
+    }
+
+    withdraw(amount: number): void {
+        if (amount > this.balance) {
+            console.log("Insufficient balance!");
+        } else {
+            this.balance -= amount;
+            console.log(`Withdraw: ${amount}, New balance: ${this.balance}`);
+        }
+    }
+}
+
+const acc = new BankAccount(1000);
+acc.deposit(500);
+acc.withdraw(300);
+acc.withdraw(2000);
