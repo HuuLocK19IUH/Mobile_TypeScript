@@ -101,3 +101,23 @@ const acc = new BankAccount(1000);
 acc.deposit(500);
 acc.withdraw(300);
 acc.withdraw(2000);
+
+// Bài 6
+class Book {
+    title: string;
+    author: string;
+    year: number;
+
+    constructor(title: string, author: string, year: number) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    display(): void {
+        console.log(`${this.title} - ${this.author} (${this.year})`);
+    }
+}
+
+const book = new Book("Clean Code", "Robert C. Martin", 2008);
+book.display();
